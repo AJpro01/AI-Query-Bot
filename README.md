@@ -200,7 +200,7 @@ python utils/debug_search.py --query "convolutional layer"
 
 # Trace query routing decisions and retrieved context chunks
 python utils/debug_query.py --query "What is attention mechanism?"
-'''
+```
 ---
 
 ## 📈 Evaluation & Benchmark Strategy
