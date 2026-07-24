@@ -1,0 +1,20 @@
+# Virtual Environment
+.venv/
+__pycache__/
+
+# Vector Store & Runtime Caches
+chroma_db/
+*.json
+!library_chunks.json  # Remove the '!' if library_chunks.json is auto-generated runtime data
+
+# Generated Audio & Visual HTML Artifacts
+*.mp3
+concept_map_*.html
+
+# Generated PDF/Markdown Evaluation Output
+eval_report.md
+Deliverables/
+
+# OS/IDE junk
+.DS_Store
+.vscode/
