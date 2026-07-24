@@ -271,7 +271,7 @@ If you use this project in your research or academic coursework, please cite it 
   year         = {2026},
   publisher    = {GitHub},
   journal      = {GitHub Repository},
-  howpublished = {\url{[https://github.com/AJpro01/ai-query-bot-large-books](https://github.com/AJpro01/ai-query-bot-large-books)}},
+  howpublished = {\url{[https://github.com/AJpro01/AI-Query-Bot](https://github.com/AJpro01/AI-Query-Bot)}},
   note         = {Guided by Dr. Anil Sharma | Maharaja Surajmal Institute of Technology \& AI-Shala Technologies Pvt. Ltd.}
 }
 ```
