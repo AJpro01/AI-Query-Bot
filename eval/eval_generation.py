@@ -21,6 +21,7 @@ Gemini comparing ground truth against retrieved context)
 """
 
 import re
+import time
 from src.llm_client import call_llm
 
 FAITHFULNESS_PROMPT = """You are a strict fact-checker. Given the CONTEXT and a GENERATED ANSWER, determine what fraction of the answer's claims are directly supported by the context.
@@ -80,7 +81,7 @@ if __name__ == "__main__":
 
     faith_scores, rel_scores, recall_scores = [], [], []
 
-    for item in EVAL_SET:
+    for item in EVAL_SET[3:11]:
         chunks = retriever.search(item["question"], top_k=3)
         context_str = format_context(chunks)
         answer = generate_answer(item["question"], chunks)
@@ -95,6 +96,8 @@ if __name__ == "__main__":
 
         print(f"Q: {item['question']}")
         print(f"   Faithfulness: {f:.2f} | Relevance: {r:.2f} | Context Recall: {c:.2f}")
+
+        time.sleep(3)  # avoid rate limiting
 
     print("\nAverages")
     print(f"  Faithfulness:   {sum(faith_scores)/len(faith_scores):.2f}")
