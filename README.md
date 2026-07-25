@@ -34,7 +34,9 @@ A modular Retrieval-Augmented Generation (RAG) system for querying large technic
 ├── app.py                   # Streamlit web interface entrypoint
 ├── pipeline.py              # Centralized CLI entrypoint
 │
-├── src/                     # Core backend source modules
+├── src/
+│   ├── lib/                     # Offline web dependencies
+│   │  └── vis-network.min.js   # Standalone vis-network graphing library                     # Core backend source modules
 │   ├── __init__.py
 │   ├── answer_synth.py      # Grounded LLM answer generation
 │   ├── book_router.py       # Keyword-distinctiveness book router
@@ -60,8 +62,6 @@ A modular Retrieval-Augmented Generation (RAG) system for querying large technic
 │   ├── eval_retrieval.py    # Hit Rate@K & MRR evaluation suite
 │   └── run_eval.py          # End-to-end evaluation orchestrator
 │
-├── lib/                     # Offline web dependencies
-│   └── vis-network.min.js   # Standalone vis-network graphing library
 │
 └── utils/                   # Debugging & diagnostic scripts
     ├── debug_query.py       # Query execution inspector
