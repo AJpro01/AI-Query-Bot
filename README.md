@@ -27,45 +27,44 @@ A modular Retrieval-Augmented Generation (RAG) system for querying large technic
 
 ```text
 .
-├── .gitignore               # Ignores venvs, local vector DBs, and raw PDFs
-├── README.md                # Project documentation and setup guide
-├── requirements.txt         # Version-pinned dependency manifest
+├── .gitignore                 # Ignores venvs, local vector DBs, and raw PDFs
+├── README.md                  # Project documentation and setup guide
+├── requirements.txt           # Version-pinned dependency manifest
 │
-├── app.py                   # Streamlit web interface entrypoint
-├── pipeline.py              # Centralized CLI entrypoint
+├── app.py                     # Streamlit web interface entrypoint
+├── pipeline.py                # Centralized CLI entrypoint
 │
-├── src/
-│   ├── lib/                     # Offline web dependencies
-│   │  └── vis-network.min.js   # Standalone vis-network graphing library                     # Core backend source modules
+├── src/                       # Core backend source modules
+│   ├── lib/                   # Offline web dependencies
+│   │   └── vis-network.min.js # Standalone vis-network graphing library                     
 │   ├── __init__.py
-│   ├── answer_synth.py      # Grounded LLM answer generation
-│   ├── book_router.py       # Keyword-distinctiveness book router
-│   ├── chapter_router.py    # Local vector chapter router
-│   ├── chapter_utils.py     # Table of Contents parsing & heuristic detection
-│   ├── chunker.py           # Hierarchical chunking engine
-│   ├── concept_extractor.py # Concept term and relation extractor
-│   ├── concept_graph.py     # NetworkX graph builder
-│   ├── embedder.py          # Vector embedding & ChromaDB interface
-│   ├── image_captioner.py   # Multimodal figure/diagram captioner
-│   ├── llm_client.py        # Centralized Gemini API client
-│   ├── pdf_parser.py        # PyMuPDF document extraction parser
-│   ├── retriever.py         # Dense + BM25 RRF hybrid retriever
-│   ├── schema.py            # Pydantic models (BookChunk, etc.)
-│   ├── sentence_streamer.py # Streaming sentence boundary detector
-│   ├── text_normalizer.py   # Speech & LaTeX normalization module
-│   ├── tts_player.py        # Edge-TTS audio synthesis player
-│   └── visualize_graph.py   # Interactive HTML concept map generator
+│   ├── answer_synth.py        # Grounded LLM answer generation
+│   ├── book_router.py         # Keyword-distinctiveness book router
+│   ├── chapter_router.py      # Local vector chapter router
+│   ├── chapter_utils.py       # Table of Contents parsing & heuristic detection
+│   ├── chunker.py             # Hierarchical chunking engine
+│   ├── concept_extractor.py   # Concept term and relation extractor
+│   ├── concept_graph.py       # NetworkX graph builder
+│   ├── embedder.py            # Vector embedding & ChromaDB interface
+│   ├── image_captioner.py     # Multimodal figure/diagram captioner
+│   ├── llm_client.py          # Centralized Gemini API client
+│   ├── pdf_parser.py          # PyMuPDF document extraction parser
+│   ├── retriever.py           # Dense + BM25 RRF hybrid retriever
+│   ├── schema.py              # Pydantic models (BookChunk, etc.)
+│   ├── sentence_streamer.py   # Streaming sentence boundary detector
+│   ├── text_normalizer.py     # Speech & LaTeX normalization module
+│   ├── tts_player.py          # Edge-TTS audio synthesis player
+│   └── visualize_graph.py     # Interactive HTML concept map generator
 │
-├── eval/                    # Benchmark & evaluation suite
-│   ├── eval_generation.py   # Faithfulness, Answer Relevance & Context Recall
+├── eval/                      # Benchmark & evaluation suite
+│   ├── eval_generation.py     # Faithfulness, Answer Relevance & Context Recall
 │   ├── eval_dataset.py
-│   ├── eval_retrieval.py    # Hit Rate@K & MRR evaluation suite
-│   └── run_eval.py          # End-to-end evaluation orchestrator
+│   ├── eval_retrieval.py      # Hit Rate@K & MRR evaluation suite
+│   └── run_eval.py            # End-to-end evaluation orchestrator
 │
-│
-└── utils/                   # Debugging & diagnostic scripts
-    ├── debug_query.py       # Query execution inspector
-    └── debug_search.py      # Lexical index diagnostic tool
+└── utils/                     # Debugging & diagnostic scripts
+    ├── debug_query.py         # Query execution inspector
+    └── debug_search.py        # Lexical index diagnostic tool
 ```
 
 ---
